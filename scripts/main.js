@@ -4,5 +4,5 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   const id = el.getAttribute('href') || '#';
   const target = document.querySelector(id);
-  target && target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
