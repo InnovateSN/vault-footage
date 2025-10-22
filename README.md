@@ -1,4 +1,6 @@
 # VaultFootage (MVP)
-Static AI stock footage vault hosted on Vercel (free domain).
-Stack: HTML/CSS/JS only (no framework).
-Purpose: showcase and validate market interest for AI-generated stock footage in the luxury lifestyle niche.
+Static MVP for the VaultFootage AI Stock Footage Vault.
+- Hosting: Vercel (https://vault-footage-l3c5.vercel.app)
+- Stack: HTML/CSS/JS (no build step)
+- Folder structure: /clips for previews, /vaults for upcoming niches.
+Deploys automatically on push to main.
