@@ -1,6 +1,8 @@
 {
   "version": 2,
   "routes": [
+    { "src": "/(styles|scripts|clips|vaults)/(.*)", "dest": "/$1/$2" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
