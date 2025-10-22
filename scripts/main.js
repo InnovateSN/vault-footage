@@ -1,0 +1,8 @@
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-scroll]');
+  if (!el) return;
+  e.preventDefault();
+  const id = el.getAttribute('href') || '#';
+  const target = document.querySelector(id);
+  target && target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
