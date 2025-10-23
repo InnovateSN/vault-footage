@@ -6,3 +6,10 @@ document.addEventListener('click', (e) => {
   const target = document.querySelector(id);
   if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+document.querySelectorAll('[data-plan]').forEach((cta) => {
+  cta.addEventListener('click', () => {
+    const plan = cta.getAttribute('data-plan');
+    console.log(`Plan CTA clicked: ${plan}`);
+  });
+});
