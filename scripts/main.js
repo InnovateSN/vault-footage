@@ -10,6 +10,6 @@ document.addEventListener('click', (e) => {
 document.querySelectorAll('[data-plan]').forEach((cta) => {
   cta.addEventListener('click', () => {
     const plan = cta.getAttribute('data-plan');
-    console.log(`Plan CTA clicked: ${plan}`);
+    console.info('Stripe checkout link clicked:', plan);
   });
 });
