@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1012" />
+      <stop offset="50%" stop-color="#2b1c0c" />
+      <stop offset="100%" stop-color="#6b4b1f" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8d089" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#f8d089" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="accent" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#f5e3c3" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#f5e3c3" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="-100" y="-80" width="900" height="600" fill="url(#glow)" transform="rotate(-12 350 270)" />
+  <circle cx="900" cy="450" r="420" fill="url(#accent)" />
+  <g fill="#f8d089" font-family="'Poppins', 'Helvetica Neue', Arial, sans-serif" letter-spacing="0.12em">
+    <text x="120" y="280" font-size="92" font-weight="600">VAULT</text>
+    <text x="120" y="368" font-size="92" font-weight="600">FOOTAGE</text>
+  </g>
+  <g fill="#f5e3c3" font-family="'Poppins', 'Helvetica Neue', Arial, sans-serif">
+    <text x="120" y="460" font-size="32" letter-spacing="0.08em">ORIGINAL STOCK FOOTAGE VAULT</text>
+  </g>
+  <rect x="120" y="492" width="220" height="4" fill="#f8d089" opacity="0.6" />
+</svg>
