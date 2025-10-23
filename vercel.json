@@ -3,6 +3,8 @@
   "routes": [
     { "src": "/(styles|scripts|clips|vaults)/(.*)", "dest": "/$1/$2" },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/pricing.html", "dest": "/pricing.html" },
+    { "src": "/join.html", "dest": "/join.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
