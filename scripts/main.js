@@ -8,8 +8,7 @@ document.addEventListener('click', (e) => {
 });
 
 document.querySelectorAll('[data-plan]').forEach((cta) => {
-  cta.addEventListener('click', () => {
-    const plan = cta.getAttribute('data-plan');
-    console.info('Stripe checkout link clicked:', plan);
+  cta.addEventListener('click', (e) => {
+    console.info('Checkout click:', e.currentTarget.dataset.plan);
   });
 });
