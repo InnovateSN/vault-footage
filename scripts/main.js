@@ -9,6 +9,6 @@ document.addEventListener('click', (e) => {
 
 document.querySelectorAll('[data-plan]').forEach((cta) => {
   cta.addEventListener('click', (e) => {
-    console.info('Checkout click:', e.currentTarget.dataset.plan);
+    console.info('Checkout click:', e.currentTarget?.dataset?.plan);
   });
 });
