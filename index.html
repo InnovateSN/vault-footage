@@ -12,6 +12,13 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="clips/social-card.svg"/>
   <link rel="stylesheet" href="styles/main.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VAULT123"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VAULT123');
+  </script>
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
@@ -34,7 +41,7 @@
     <p class="h-sub">A growing vault of exclusive footage. Royalty-free, commercial rights included, download in seconds.</p>
     <div class="hero-badge">✨ New clips added daily — instant download available</div>
     <div class="cta">
-      <a class="btn gold" href="/pricing.html">Start with £29/mo</a>
+      <a class="btn gold" href="/pricing.html" data-plan="monthly">Start with £29/mo</a>
       <a class="btn" href="/pricing.html" data-scroll>See Pricing</a>
     </div>
     <div class="kpis">
@@ -83,17 +90,17 @@
       <div class="card pricing-card">
         <div class="meta"><strong>Monthly</strong><span>£29/month</span></div>
         <div class="meta"><span class="badge">Unlimited 4K access • Cancel anytime • Instant downloads</span><span>&nbsp;</span></div>
-        <a class="btn gold" href="https://buy.stripe.com/5kQfZgh0vfAUgL3rK38400" target="_blank" rel="noopener">Subscribe Monthly</a>
+        <a class="btn gold" href="https://buy.stripe.com/5kQfZgh0vfAUgL3rK38400" target="_blank" rel="noopener" data-plan="monthly">Subscribe Monthly</a>
       </div>
       <div class="card pricing-card">
         <div class="meta"><strong>Yearly</strong><span>£279/year</span></div>
         <div class="meta"><span class="badge">Unlimited 4K access • 20% savings • Instant downloads</span><span class="discount-tag">&nbsp;</span></div>
-        <a class="btn gold" href="https://buy.stripe.com/5kQ7sKfWrdsM8NhbYg38401" target="_blank" rel="noopener">Subscribe Yearly</a>
+        <a class="btn gold" href="https://buy.stripe.com/5kQ7sKfWrdsM8NhbYg38401" target="_blank" rel="noopener" data-plan="yearly">Subscribe Yearly</a>
       </div>
       <div class="card pricing-card">
         <div class="meta"><strong>Lifetime</strong><span>£699 one-time</span></div>
         <div class="meta"><span class="badge">Unlimited 4K access • Future updates included • Instant downloads</span><span>&nbsp;</span></div>
-        <a class="btn gold" href="https://buy.stripe.com/14A14m4dJ385s3Xd2k38402" target="_blank" rel="noopener">Buy Lifetime Access</a>
+        <a class="btn gold" href="https://buy.stripe.com/14A14m4dJ385s3Xd2k38402" target="_blank" rel="noopener" data-plan="lifetime">Buy Lifetime Access</a>
       </div>
     </div>
     <p class="stripe-note">Secure checkout via Stripe ✓</p>
