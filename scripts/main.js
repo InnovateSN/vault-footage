@@ -11,6 +11,15 @@ document.addEventListener('click', (e) => {
 
 document.querySelectorAll('[data-plan]').forEach((cta) => {
   cta.addEventListener('click', (e) => {
-    console.info('Checkout click:', e.currentTarget?.dataset?.plan);
+    const plan = e.currentTarget?.dataset?.plan;
+    if (!plan) return;
+
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'plan_selected', { plan });
+    }
+
+    console.info('Checkout click:', plan);
   });
 });
+
+// TODO: send email + plan info to Make webhook
