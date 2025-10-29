@@ -11,6 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
+  console.log('WEBHOOK POST hit!');
   const sig = (req.headers['stripe-signature'] as string) || '';
   const buf = await buffer(req);
   try {
