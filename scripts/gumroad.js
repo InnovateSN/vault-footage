@@ -1,9 +1,9 @@
 (function () {
   var BASE_URL = 'https://vaultfootage.gumroad.com/l/';
   var SLUGS = {
-    monthly: 'TODO_MONTHLY',
-    yearly: 'TODO_YEARLY',
-    lifetime: 'TODO_LIFETIME'
+    monthly: 'lyzbjnq',
+    yearly: 'nfqwgul',
+    lifetime: 'udlsih'
   };
 
   function resolveSlug(key) {
