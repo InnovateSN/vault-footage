@@ -7,6 +7,6 @@
     { "src": "/success.html", "dest": "/success.html" },
     { "src": "/cancel.html", "dest": "/cancel.html" },
     { "src": "/join.html", "dest": "/join.html" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/((?!api).*)", "dest": "/index.html" }
   ]
 }
