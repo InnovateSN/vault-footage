@@ -1,12 +1,6 @@
 {
-  "version": 2,
   "routes": [
-    { "src": "/(styles|scripts|clips|vaults)/(.*)", "dest": "/$1/$2" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/pricing.html", "dest": "/pricing.html" },
-    { "src": "/success.html", "dest": "/success.html" },
-    { "src": "/cancel.html", "dest": "/cancel.html" },
-    { "src": "/join.html", "dest": "/join.html" },
-    { "src": "/((?!api).*)", "dest": "/index.html" }
+    { "src": "^/api/(.*)$", "dest": "/api/$1" },
+    { "src": "^(?!/api/).*$", "dest": "/index.html" }
   ]
 }
