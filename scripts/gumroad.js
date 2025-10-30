@@ -1,8 +1,8 @@
 (function () {
-  var BASE_URL = 'https://vaultfootage.gumroad.com/l/';
+  var BASE_URL = 'https://innovatesol.gumroad.com/l/';
   var SLUGS = {
-    monthly: 'lyzbjnq',
-    yearly: 'nfqwgul',
+    monthly: 'yzbjnq',
+    yearly: 'nfqwgu',
     lifetime: 'udlsih'
   };
 
@@ -33,6 +33,21 @@
     buttons.forEach(ensureHref);
   }
 
+  function scheduleFallback(event, anchor) {
+    if (!anchor) return;
+    var href = anchor.getAttribute('href');
+    if (!href) return;
+
+    window.setTimeout(function () {
+      if (!event.defaultPrevented) {
+        var opened = window.open(href, '_blank', 'noopener');
+        if (!opened) {
+          window.location.href = href;
+        }
+      }
+    }, 2000);
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', hydrateAll);
   } else {
@@ -43,5 +58,6 @@
     var anchor = event.target.closest('a.gumroad-button');
     if (!anchor) return;
     ensureHref(anchor);
+    scheduleFallback(event, anchor);
   }, true);
 })();
