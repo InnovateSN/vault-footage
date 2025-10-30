@@ -207,3 +207,31 @@ a { color: var(--gold); text-decoration: none; }
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto !important; }
 }
+
+.recommend-badge {
+  background: linear-gradient(90deg, #e6c567, #d4b14a);
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: 0 0 12px rgba(230,197,103,0.5);
+}
+
+.card.pricing-card:nth-child(1) {
+  border-color: rgba(230,197,103,0.7);
+  box-shadow: 0 0 22px rgba(230,197,103,0.25);
+}
+
+.card.pricing-card:nth-child(1) .btn.gold {
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(230,197,103,0.35); }
+  50% { box-shadow: 0 0 35px rgba(230,197,103,0.8); }
+}
