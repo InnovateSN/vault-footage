@@ -14,10 +14,11 @@
     if (!anchor) return;
     var slug = anchor.getAttribute('data-gumroad');
     if (!slug) return;
-    if (!anchor.getAttribute('href')) {
-      anchor.setAttribute('href', BASE_URL + resolveSlug(slug));
+    var desiredHref = BASE_URL + resolveSlug(slug);
+    if (anchor.getAttribute('href') !== desiredHref) {
+      anchor.setAttribute('href', desiredHref);
     }
-    if (!anchor.getAttribute('target')) {
+    if (anchor.getAttribute('target') !== '_blank') {
       anchor.setAttribute('target', '_blank');
     }
     var rel = anchor.getAttribute('rel');
@@ -26,6 +27,10 @@
     } else if (!/noopener/.test(rel)) {
       anchor.setAttribute('rel', rel + ' noopener');
     }
+  }
+
+  function hasGumroadIframe() {
+    return !!document.querySelector('iframe[src*="gumroad.com" i]');
   }
 
   function hydrateAll() {
@@ -40,10 +45,14 @@
 
     window.setTimeout(function () {
       if (!event.defaultPrevented) {
-        var opened = window.open(href, '_blank', 'noopener');
-        if (!opened) {
-          window.location.href = href;
-        }
+        return;
+      }
+      if (hasGumroadIframe()) {
+        return;
+      }
+      var opened = window.open(href, '_blank', 'noopener');
+      if (!opened) {
+        window.location.href = href;
       }
     }, 2000);
   }
