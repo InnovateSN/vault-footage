@@ -3,7 +3,8 @@
   var SLUGS = {
     monthly: 'yzbjnq',
     yearly: 'nfqwgu',
-    lifetime: 'udlsih'
+    lifetime: 'udlsih',
+    trial10: 'mpgblc'
   };
 
   function resolveSlug(key) {
