@@ -12,6 +12,101 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="clips/social-card.svg"/>
   <link rel="stylesheet" href="styles/main.css"/>
+  <style>
+    .trial-banner {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      padding: 14px 1.5rem;
+      background: #0b0b0f;
+      color: #e6c567;
+      border-bottom: 1px solid rgba(230, 197, 103, 0.2);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    .trial-banner__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .trial-banner__text {
+      flex: 1 1 auto;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .trial-banner__actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .trial-banner__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, rgba(230, 197, 103, 0.95), rgba(230, 197, 103, 0.75));
+      color: #0b0b0f;
+      font-weight: 600;
+      font-size: 0.92rem;
+      box-shadow: 0 12px 28px rgba(230, 197, 103, 0.35);
+      border: none;
+    }
+
+    .trial-banner__cta:hover,
+    .trial-banner__cta:focus,
+    .trial-banner__cta:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 42px rgba(230, 197, 103, 0.4);
+      outline: 2px solid rgba(230, 197, 103, 0.6);
+      outline-offset: 3px;
+    }
+
+    .trial-banner__dismiss {
+      background: transparent;
+      color: inherit;
+      border: 1px solid rgba(230, 197, 103, 0.35);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+
+    .trial-banner__dismiss:hover,
+    .trial-banner__dismiss:focus,
+    .trial-banner__dismiss:focus-visible {
+      background: rgba(230, 197, 103, 0.12);
+      color: #f5e3a6;
+      border-color: rgba(230, 197, 103, 0.6);
+      outline: 2px solid rgba(230, 197, 103, 0.45);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .trial-banner {
+        padding: 16px 1rem;
+      }
+
+      .trial-banner__inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .trial-banner__actions {
+        justify-content: center;
+      }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,6 +176,7 @@
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
+  <div id="trial-banner-root"></div>
   <header class="header">
     <div class="brand">
       <div class="brand-badge">VF</div>
