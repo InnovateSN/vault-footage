@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vault-footage-l3c5.vercel.app/sitemap.xml
